@@ -43,7 +43,7 @@ const CounterList = () => {
 	};
 
 	return (
-		<>
+		<div className="container">
 			{counters.map(count =>
 				<Counter
 					key={count.id}
@@ -51,9 +51,10 @@ const CounterList = () => {
 					onDelete={handleDelete}
 					onIncrement={handleIncrement}
 					onDecrement={handleDecrement} />
-			)}
-			<button className="btn btn-primary btn-sm m-2" onClick={handleReset}>Reset</button>
-		</>
+			)}<div className="d-flex justify-content-end me-5">
+				<button className="btn btn-primary btn-sm m-2" onClick={handleReset}>Reset</button>
+			</div>
+		</div>
 	);
 };
 
